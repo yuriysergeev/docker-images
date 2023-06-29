@@ -10,7 +10,7 @@ JFYI - docker commands:
 - docker build -t busybox-python .
 - docker run -p 8080:8000 -d busybox-python:latest
 - docker logs <put_here_docker_id> -f
-- docker exec -it <put_here_docker_id> /bin/bash'
+- docker exec -it <put_here_docker_id> /bin/bash
 - docker commit <put_here_docker_id> busybox-python:0.1
 - docker tag busybox-python:0.1 <dockerhub-name>/busybox-python:0.1
 - docker tag busybox-python:latest <dockerhub-name>/busybox-python:latest
