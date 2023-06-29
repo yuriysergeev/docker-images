@@ -12,15 +12,15 @@ JFYI - docker commands:
 - docker logs <put_here_docker_id> -f
 - docker exec -it <put_here_docker_id> /bin/bash
 - docker commit <put_here_docker_id> busybox-python:0.1
-- docker tag busybox-python:0.1 <dockerhub-name>/busybox-python:0.1
-- docker tag busybox-python:latest <dockerhub-name>/busybox-python:latest
+- docker tag busybox-python:0.1 <dockerhub-name> /busybox-python:0.1
+- docker tag busybox-python:latest <dockerhub-name> /busybox-python:latest
 - docker login
-- docker push <dockerhub-name>/busybox-python:0.1
-- docker push <dockerhub-name>/busybox-python:latest
+- docker push <dockerhub-name> /busybox-python:0.1
+- docker push <dockerhub-name> /busybox-python:latest
 - docker stop <put_here_docker_id>
 - docker rm <put_here_docker_id>
 - docker rmi busybox-python:0.1
 - docker rm -vf $(docker ps -a -q)
 - docker rmi -f $(docker images -a -q)
 ## Build & Tag & Push multiarch image to the DockerHub
-- docker buildx build --platform linux/amd64,linux/arm64 --file Dockerfile --tag <dockerhub-name>/busybox-python:latest --push .
+- docker buildx build --platform linux/amd64,linux/arm64 --file Dockerfile --tag <dockerhub-name> /busybox-python:latest --push .
