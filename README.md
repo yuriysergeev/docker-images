@@ -22,3 +22,5 @@ JFYI - docker commands:
 - docker rmi busybox-python:0.1
 - docker rm -vf $(docker ps -a -q)
 - docker rmi -f $(docker images -a -q)
+## Build & Tag & Push multiarch image to the DockerHub
+- docker buildx build --platform linux/amd64,linux/arm64 --file Dockerfile --tag <dockerhub-name>/busybox-python:latest --push .
