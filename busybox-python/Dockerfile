@@ -1,3 +1,3 @@
-FROM python:3.11.4
+FROM python:3-slim
 COPY server.py /server.py
 ENTRYPOINT ["python3","-u", "server.py"]
